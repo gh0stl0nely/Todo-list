@@ -1,0 +1,74 @@
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#title{
+  position: relative;
+  text-align: center;
+  top: 100px;
+  font-size: 90px;
+}
+
+input{
+  position: relative;
+  width: 30%;
+  text-align: center;
+  top: 100px;
+  left: 30%;  
+}
+
+#addTask{
+  cursor: pointer;
+  position: relative;
+  top: 100px;
+  left: 30%; 
+  border-style: solid;
+  border-color: green;
+  border-radius: 10%;
+}
+
+#deleteTask{
+  position: relative;
+  top: 100px;
+  left:30%;
+  border-style: solid;
+  border-color: red;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+#deleteAll{
+  position: relative;
+  top: 140px;
+  text-align: center;
+  border-style: solid;
+  cursor: pointer;
+  width: 40%;
+  margin: 0 auto;
+}
+
+ul{
+  position: relative;
+  top: 120px;
+  left: 25%; 
+  width: 50%;
+  border-style: solid;
+  border-color: black;
+} 
+
+ul li{
+  list-style-type: none;
+  padding: 5px;
+}
+
+li:nth-child(odd){
+  background: rgb(219, 169, 169);
+}
+
+ul li:hover{
+  transition: 1s;
+  background: greenyellow;
+}
