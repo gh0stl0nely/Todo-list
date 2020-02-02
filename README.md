@@ -14,7 +14,6 @@ Working internet
 
 * [HTML](https://devdocs.io/html/)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Bootstrap](https://getbootstrap.com/)
 * [Javascript](https://devdocs.io/javascript/)
 
 ## Authors
