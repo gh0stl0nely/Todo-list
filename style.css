@@ -1,74 +1,59 @@
-*, *:before, *:after{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    color: rgb(176, 252, 255);
+}
+body{
+    background-color: rgb(97, 93, 148);
+}
+.title{
+    font-size: 60px;
+    text-decoration: underline;
+    margin-top: 50px;
+    text-align: center;
 }
 
-
-#title{
-  position: relative;
-  text-align: center;
-  top: 100px;
-  font-size: 90px;
+#list{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 50%;
+    list-style: none;
+    text-align: center;
 }
 
-input{
-  position: relative;
-  width: 30%;
-  text-align: center;
-  top: 100px;
-  left: 30%;  
+.item{
+    position: relative;
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    overflow-wrap: break-word;
+    height: 100%;
+    
 }
 
-#addTask{
-  cursor: pointer;
-  position: relative;
-  top: 100px;
-  left: 30%; 
-  border-style: solid;
-  border-color: green;
-  border-radius: 10%;
+.add-clear{
+    padding: 5px;
+    color: black;
 }
 
-#deleteTask{
-  position: relative;
-  top: 100px;
-  left:30%;
-  border-style: solid;
-  border-color: red;
-  border-radius: 10%;
-  cursor: pointer;
+.align-content{
+    text-align: center; 
+    margin-top: 20px;
 }
 
-#deleteAll{
-  position: relative;
-  top: 140px;
-  text-align: center;
-  border-style: solid;
-  cursor: pointer;
-  width: 40%;
-  margin: 0 auto;
+.delete-btn{
+    /* display: inline-block; */
+    border-radius: 10%;
+    color: black; 
+    font-weight: bold;   
 }
 
-ul{
-  position: relative;
-  top: 120px;
-  left: 25%; 
-  width: 50%;
-  border-style: solid;
-  border-color: black;
-} 
-
-ul li{
-  list-style-type: none;
-  padding: 5px;
-}
-
-li:nth-child(odd){
-  background: rgb(219, 169, 169);
-}
-
-ul li:hover{
-  transition: 1s;
-  background: greenyellow;
+.edit-btn{
+    border-radius: 10%;
+    color: black; 
+    font-weight: bold;   
+    margin-left: 10px;
 }
