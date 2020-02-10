@@ -1,6 +1,6 @@
 # Project Title
 
-A simple to-do list
+To-Do List
 
 ## Demo
 
@@ -15,6 +15,8 @@ Working internet
 * [HTML](https://devdocs.io/html/)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://devdocs.io/javascript/)
+* [Bootstrap](https://getbootstrap.com/)
+* [WEP API Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage)
 
 ## Authors
 
