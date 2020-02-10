@@ -35,18 +35,24 @@ function addTask(){
         //Create a div for 2 buttons
         var div = document.createElement('div');
         div.style.display = "block";
+        div.style.marginTop = "10px";
 
         // Add button to list item
         var deleteBtn = document.createElement('button');
         deleteBtn.innerHTML = 'Complete';
         deleteBtn.className += 'delete-btn';
         var editBtn = document.createElement('button');
-        editBtn.innerHTML = 'Edit Task';
+        editBtn.innerHTML = 'Edit';
         editBtn.className += 'edit-btn';
+        editBtn.setAttribute('data-toggle', 'modal');
+        editBtn.setAttribute('data-target', '#myModal');
+        editBtn.addEventListener('click', function(){
+            localStorage.setItem('current_id', this.parentElement.parentElement.id);
+        })
+
         div.appendChild(deleteBtn);
         div.appendChild(editBtn);
         li.appendChild(div);
-
 
         deleteBtn.addEventListener('click', deleteTask);
 
@@ -120,19 +126,27 @@ function displayAll(){
         // Add button to list item
         var div = document.createElement('div');
         div.style.display = "block";
+        div.style.marginTop = "10px";
 
         // Add button to list item
         var deleteBtn = document.createElement('button');
         deleteBtn.innerHTML = 'Complete';
         deleteBtn.className += 'delete-btn';
         var editBtn = document.createElement('button');
-        editBtn.innerHTML = 'Edit Task';
+        editBtn.innerHTML = 'Edit';
         editBtn.className += 'edit-btn';
+        editBtn.setAttribute('data-toggle', 'modal');
+        editBtn.setAttribute('data-target', '#myModal');
+        deleteBtn.addEventListener('click', deleteTask);
+        editBtn.addEventListener('click', function(){
+            localStorage.setItem('current_id', this.parentElement.parentElement.id);
+        })
+
         div.appendChild(deleteBtn);
         div.appendChild(editBtn);
         
         li.appendChild(div);
-        deleteBtn.addEventListener('click', deleteTask);
+       
         
     
         // Add to the task list (ul)
@@ -147,9 +161,23 @@ function clearAll(){
     localStorage.removeItem('ID');
  }
 
-// function editTask(){
+function savedTask(){
+    
+    var parentID = Number(localStorage.getItem('current_id')); // Id of List Item
 
-// }
+    // alert()
+    var list = JSON.parse(localStorage.getItem('list'));
+    var newContent = document.getElementById('new-content').value;
+
+    //The textContent of LI is changed
+    document.getElementById(parentID.toString()).childNodes[0].textContent = newContent;
+
+    //Changed it in the list2
+    list.splice(parentID,1,newContent);
+
+    localStorage.setItem('list',JSON.stringify(list));
+    document.getElementById('new-content').value = "";
+}
  
 
 document.getElementById('task').addEventListener('keyup', function(e){
